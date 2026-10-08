@@ -1,0 +1,69 @@
+
+---
+const experiences = [
+  {
+    period: 'Jan 2026 — Aug 2026',
+    role: 'Software Developer / Research Associate',
+    company: 'Rinnoco Ltd',
+    description:
+      'Worked on backend development, REST API integrations, data processing systems and database-driven applications using Laravel, PHP, C++ and PostgreSQL.',
+    technologies: ['Laravel', 'PHP', 'C++', 'PostgreSQL', 'Docker']
+  },
+  {
+    period: 'Mar 2024 — Aug 2024',
+    role: 'Software Development Intern',
+    company: 'Rinnoco Ltd',
+    description:
+      'Gained hands-on experience in software development, backend functionality, databases and collaborative development workflows.',
+    technologies: ['PHP', 'Laravel', 'MySQL', 'Git']
+  }
+];
+---
+
+<section id="experience" class="scroll-mt-20 border-y border-slate-800/70 bg-surface/30">
+  <div class="mx-auto max-w-6xl px-6 py-24">
+
+    <p class="mb-4 text-sm font-medium tracking-widest text-ice">
+      02 / EXPERIENCE
+    </p>
+
+    <h2 class="mb-12 text-3xl font-bold tracking-tight text-white md:text-5xl">
+      Professional Experience
+    </h2>
+
+    <div class="space-y-12">
+      {experiences.map((experience) => (
+        <article class="grid gap-4 border-l-2 border-ice/40 pl-6 md:grid-cols-[180px_1fr]">
+
+          <p class="text-sm text-muted-blue">
+            {experience.period}
+          </p>
+
+          <div>
+            <h3 class="text-xl font-semibold text-white">
+              {experience.role}
+            </h3>
+
+            <p class="mt-2 font-medium text-ice">
+              {experience.company}
+            </p>
+
+            <p class="mt-5 max-w-2xl leading-7 text-muted-blue">
+              {experience.description}
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              {experience.technologies.map((tech) => (
+                <span class="rounded-md border border-slate-700 px-3 py-1 text-xs text-slate-300">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

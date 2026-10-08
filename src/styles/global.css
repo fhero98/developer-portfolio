@@ -1,0 +1,21 @@
+
+@import "tailwindcss";
+
+/* Portfolio color system */
+@theme {
+  --color-midnight: #0C1524;
+  --color-surface: #182942;
+  --color-ice: #60B5FA;
+  --color-muted-blue: #9BB5CD;
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--color-midnight);
+  color: #F8FAFC;
+}

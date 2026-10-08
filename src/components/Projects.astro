@@ -1,0 +1,83 @@
+
+---
+const projects = [
+  {
+    number: '01',
+    title: 'EV Charging Digital Twin',
+    category: 'IoT / Monitoring / Analytics',
+    description:
+      'A digital twin framework for monitoring and managing electric vehicle charging sessions in smart buildings. Includes real-time dashboards, historical analysis and automated alerts.',
+    technologies: ['MQTT', 'Home Assistant', 'Orion-LD', 'Python'],
+    github: '',
+    featured: true
+  }
+];
+---
+
+<section id="projects" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+  <p class="mb-4 text-sm font-medium tracking-widest text-ice">
+    03 / SELECTED WORK
+  </p>
+
+  <h2 class="text-3xl font-bold tracking-tight text-white md:text-5xl">
+    Things I've built.
+  </h2>
+
+  <p class="mt-5 max-w-2xl leading-7 text-muted-blue">
+    A selection of projects focused on backend engineering,
+    integrations and connected systems.
+  </p>
+
+  <div class="mt-12 grid gap-6">
+    {projects.map((project) => (
+      <article class="group overflow-hidden rounded-2xl border border-slate-800 bg-surface/50 transition-colors hover:border-ice/50">
+        <div class="grid md:grid-cols-2">
+
+          <div class="flex min-h-64 flex-col items-center justify-center bg-surface/50 p-8">
+            <span class="text-sm font-medium tracking-widest text-ice">
+              FEATURED PROJECT / {project.number}
+            </span>
+            <div class="mt-6 text-center">
+              <p class="text-3xl font-bold text-white">EV Charging</p>
+              <p class="mt-2 text-lg text-sky-200">Digital Twin</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center p-8">
+            <p class="text-xs uppercase tracking-widest text-ice">
+              {project.category}
+            </p>
+
+            <h3 class="mt-4 text-2xl font-semibold text-white">
+              {project.title}
+            </h3>
+
+            <p class="mt-5 leading-7 text-muted-blue">
+              {project.description}
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span class="rounded-md border border-slate-700 px-3 py-1 text-xs text-slate-300">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-8 inline-flex items-center gap-2 self-start font-medium text-ice hover:text-sky-200"
+              >
+                View Source Code ↗
+              </a>
+            )}
+          </div>
+
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
